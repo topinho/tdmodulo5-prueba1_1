@@ -29,17 +29,10 @@ const store = new Vuex.Store({
     DAME_COLOR (state) {
       state.color = Util.generar_color()
     }
-  },
-  actions: {
-    dame_color() {  
-      const color = Util.generar_color()
-      return color
-    }
   }
 })
 new Vue({
   render: h => h(App),
   router: router,
-  store: store,
-  util: Util
+  store: store
 }).$mount('#app')
